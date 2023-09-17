@@ -1,0 +1,58 @@
+{
+  "name": "gashey/laravel-pami",
+  "description": "A laravel wrapper around the PAMI library",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "George Hagan",
+      "email": "george.hagan@mobivs.com"
+    }
+  ],
+  "repositories": [
+    { "type": "git", "url": "https://github.com/gashey/PAMI.git" }
+  ],
+  "require": {
+    "gashey/pami": "dev-master",
+    "ext-pcntl": "*"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^8.10",
+    "pestphp/pest": "^2.18",
+    "pestphp/pest-plugin-laravel": "^2.2",
+    "phpstan/phpstan": "^1.10",
+    "roave/security-advisories": "dev-latest",
+    "phpunit/php-code-coverage": "^10.1",
+    "squizlabs/php_codesniffer": "^3.7",
+    "phpmd/phpmd" : "@stable"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mobiverse\\LaravelPami\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Mobiverse\\LaravelPami\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "lint": "vendor/bin/phpcs -s src tests",
+    "lint-fix": "vendor/bin/phpcbf src tests",
+    "sca": "vendor/bin/phpstan analyse src tests",
+    "phpmd": "vendor/bin/phpmd ./src text codesize",
+    "test": "vendor/bin/pest"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Mobiverse\\LaravelPami\\LaravelPamiServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
