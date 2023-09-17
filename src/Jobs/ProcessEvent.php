@@ -32,7 +32,7 @@ class ProcessEvent implements ShouldQueue
         IPamiEventMessageHandler $eventHandler,
         EventMessage $event
     ) {
-        $this->onQueue(config('laravel-pami.queue_name', 'default'));
+//        $this->onQueue(config('laravel-pami.queue_name', 'default'));
         $this->event = $event;
         $this->eventHandler = $eventHandler;
     }
