@@ -52,21 +52,20 @@ class PamiEventMessageListener implements IEventListener
     {
         $handlers = $this->subscriptions[$event->getName()] ?? [];
         foreach ($handlers as $handler) {
-            ProcessEventMessage::dispatch($handler, $event);
-//            switch($pid = pcntl_fork())
-//            {
-//                case 0:
-//                    $handler->execute($event);
-//                    echo "Application finished\n";
-//                    exit(0);
-//                    break;
-//                case -1:
-//                    echo "Could not fork application\n";
-//                    break;
-//                default:
-//                    echo "Forked Application\n";
-//                    break;
-//            }
+            switch($pid = pcntl_fork())
+            {
+                case 0:
+                    $handler->execute($event);
+                    echo "Application finished\n";
+                    exit(0);
+                    break;
+                case -1:
+                    echo "Could not fork application\n";
+                    break;
+                default:
+                    echo "Forked Application\n";
+                    break;
+            }
         }
     }
 
