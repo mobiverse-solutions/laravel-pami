@@ -13,7 +13,7 @@
     { "type": "git", "url": "https://github.com/gashey/PAMI.git" }
   ],
   "require": {
-    "gashey/pami": "dev-master",
+    "gashey/pami": "0.1.*",
     "ext-pcntl": "*"
   },
   "require-dev": {
