@@ -14,7 +14,7 @@ use PAMI\Message\Event\EventMessage;
  * @package Mobiverse\LaravelPami
  * Event handler Job
  */
-class ProcessEvent implements ShouldQueue
+class ProcessEventMessage implements ShouldQueue
 {
     use Dispatchable;
     use InteractsWithQueue;
