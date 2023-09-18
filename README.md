@@ -50,6 +50,10 @@ This package is not available on Packagist. Hence, to use this package in your l
     ```json
     {
       "repositories": [
+        { 
+          "type": "git", 
+          "url": "https://github.com/gashey/PAMI.git" 
+        },
         {
           "type": "git",
           "url": "https://github.com/gashey/laravel-pami.git"
@@ -85,7 +89,7 @@ This package is not available on Packagist. Hence, to use this package in your l
 5. After successfully adding this package to your project, you will need to publish the config file where you can
    set up your credentials for Asterisk AMI access. The following command will allow you to do that:
     ```bash
-    php artisan vendor:publish laravel-pami-config
+    php artisan vendor:publish --tag laravel-pami-config
     ```
 
 6. The config file `laravel-pami.php`, will be published to your config directory `./config`. Customize
