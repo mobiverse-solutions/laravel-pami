@@ -2,8 +2,8 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/JetstreamAfrica/The-Documentation-Compendium.svg)](https://github.com/JetstreamAfrica/raven/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/JetstreamAfrica/The-Documentation-Compendium.svg)](https://github.com/JetstreamAfrica/raven/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/mobiverse-solutions/The-Documentation-Compendium.svg)](https://github.com/JetstreamAfrica/raven/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/mobiverse-solutions/The-Documentation-Compendium.svg)](https://github.com/JetstreamAfrica/raven/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
@@ -31,28 +31,10 @@ Laravel PAMI is a Laravel package which is a wrapper around the PAMI package by 
 ### Prerequisites
 Before setting up this project on your local machine, you need to meet the following requirements:
 
-1. PHP v8.2.4
-2. Composer v2.5.5
+1. PHP v8.0
+2. Composer v2.3.2
 
 NB: versions may vary
-
-### Set Up
-To set up the project:
-
-- Clone the repository using the command:
-    ```bash
-    git clone https://github.com/gashey/laravel-pami.git
-    ```
-
-- Install dependencies using the command:
-    ```bash
-    composer install
-    ```
-
-- And, run tests using the command:
-    ```bash
-    composer test
-    ```
 
 ## 🎈 Usage <a name="usage"></a>
 This package is not available on Packagist. Hence, to use this package in your laravel project:
@@ -70,7 +52,7 @@ This package is not available on Packagist. Hence, to use this package in your l
       "repositories": [
         {
           "type": "git",
-          "url": "https://github.com/gashey/laravel-pami.git",
+          "url": "https://github.com/gashey/laravel-pami.git"
         }
       ]
     }
@@ -101,7 +83,7 @@ This package is not available on Packagist. Hence, to use this package in your l
     ```
 
 5. After successfully adding this package to your project, you will need to publish the config file where you can
-   set up your credentials for Sinay APIs access. The following command will allow you do that:
+   set up your credentials for Asterisk AMI access. The following command will allow you to do that:
     ```bash
     php artisan vendor:publish laravel-pami-config
     ```
@@ -131,14 +113,10 @@ This package is not available on Packagist. Hence, to use this package in your l
     ]
    ```
 
-9. The event handlers are dispatched as Laravel Jobs hence you must enable processing of jobs in the queue. You can specify the queue to use in the config file.
-   ```php
-   'queue_name' => env('LARAVEL_PAMI_QUEUE_NAME', 'default'),
-   ```
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 - [PHP](https://www.php.net/) - Language
-- [PAMI](https://github.com/gashey/PAMI.git) Library
+- [PAMI](https://github.com/marcelog/PAMI) Library
 
 ## ✍️ Authors <a name = "authors"></a>
 - [@gashey](https://github.com/gashey) - Initial work
